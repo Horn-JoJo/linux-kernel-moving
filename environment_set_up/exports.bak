@@ -1,0 +1,16 @@
+# /etc/exports: the access control list for filesystems which may be exported
+#		to NFS clients.  See exports(5).
+#
+# Example for NFSv2 and NFSv3:
+# /srv/homes       hostname1(rw,sync,no_subtree_check) hostname2(ro,sync,no_subtree_check)
+#
+# Example for NFSv4:
+# /srv/nfs4        gss/krb5i(rw,sync,fsid=0,crossmnt,no_subtree_check)
+# /srv/nfs4/homes  gss/krb5i(rw,sync,no_subtree_check)
+#
+# *   表示允许所有的网段访问，也可以是具体的IP
+# rw  挂接此目录的客户端对该目录共享具有读写权限
+# sync 资料同步写入到内存和硬盘
+# no_root_squash root用户具有对根目录的完全访问权限
+# no_subtree_check 不检查父目录的权限
+/home/linux/2023/linux-kernel-moving/nfs *(rw,sync,no_root_squash,no_subtree_check)

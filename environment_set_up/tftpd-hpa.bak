@@ -1,0 +1,9 @@
+# /etc/default/tftpd-hpa
+
+TFTP_USERNAME="tftp"
+#TFTP_DIRECTORY="/var/lib/tftpboot"
+#set TFTP_DIRECTORY 
+TFTP_DIRECTORY="/home/linux/2023/linux-kernel-moving/tftp_dir/"
+
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure"
